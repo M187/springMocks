@@ -1,0 +1,21 @@
+<Hobex>
+	<XML>
+		<TID>3518021</TID>
+		<VU>*requestVU*</VU>
+		<ReturnCode>0</ReturnCode>
+		<ReceiptInfo>
+			<Account>*requestAccount*</Account> <!-- iban number -->
+			<Bank>*requestBank*</Bank>
+			<CountryCode>*requestCountryCode*</CountryCode>
+			<Amount>*requestAmount*</Amount>
+			<ReferenceNumber>*requestReferenceNumber*</ReferenceNumber>
+			<Date>*NOW*</Date>
+			<Time>*NOW*</Time>
+			<Signature>  <!-- Generated signature -> generator((('a'..'f')+('0'..'9')).join(), 64)-->  </Signature>
+			<Receipt>1089</Receipt>
+			<CancelReceipt></CancelReceipt>
+			<AuthCode>  <!-- Generated code -> generator((('a'..'f')+('0'..'9')).join(), 6)-->  </AuthCode>
+			<AuthTID>3518021</AuthTID>
+		</ReceiptInfo>
+	</XML>
+</Hobex>

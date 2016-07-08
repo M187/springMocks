@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ep.engine.com/hobex-vt/hobex-types"
+	xmlns:tns="http://www.ep.engine.com/hobex-vt/hobex-types"
+	elementFormDefault="qualified">
+
+	<simpleType name="iban">
+		<restriction base="string">
+			<pattern
+				value="[a-zA-Z]{2}[0-9]{2}[a-zA-Z0-9]{4}[0-9]{7}([a-zA-Z0-9]?){0,16}">
+			</pattern>
+		</restriction>
+	</simpleType>
+
+	<simpleType name="bic">
+		<restriction base="string">
+			<pattern value="([a-zA-Z]{4}[a-zA-Z]{2}[a-zA-Z0-9]{2}([a-zA-Z0-9]{3})?)">
+			</pattern>
+		</restriction>
+	</simpleType>
+
+	<simpleType name="tid">
+		<restriction base="int">
+			<pattern value="[0-9]{8}"></pattern>
+		</restriction>
+	</simpleType>
+
+	<simpleType name="currency">
+		<restriction base="string">
+			<pattern value="[A-Z]{3}"></pattern>
+		</restriction>
+	</simpleType>
+
+	<simpleType name="country">
+		<restriction base="string">
+			<enumeration value="040" />
+			<enumeration value="280" />
+			<enumeration value="000" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="amount">
+		<restriction base="long">
+			<pattern value="[0-9]{0,18}"></pattern>
+		</restriction>
+	</simpleType>
+
+	<simpleType name="recurring-payment">
+		<restriction base="int">
+			<enumeration value="0" />
+			<enumeration value="1" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="num-max3">
+		<restriction base="int">
+			<pattern value="[0-9]{0,3}"></pattern>
+		</restriction>
+	</simpleType>
+
+	<simpleType name="num-max8">
+		<restriction base="int">
+			<pattern value="[0-9]{0,8}"></pattern>
+		</restriction>
+	</simpleType>
+
+	<simpleType name="string-4">
+		<restriction base="string">
+			<minLength value="4" />
+			<maxLength value="4" />
+		</restriction>
+	</simpleType>
+	
+	<simpleType name="an-max6">
+		<restriction base="string">
+			<pattern value="[A-Za-z0-9]{0,6}" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="an-max15">
+		<restriction base="string">
+			<pattern value="[A-Za-z0-9]{0,15}" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="an-max20">
+		<restriction base="string">
+			<pattern value="[A-Za-z0-9]{0,15}" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="an-max27">
+		<restriction base="string">
+			<pattern value="[A-Za-z0-9]{0,27}" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="an-max35">
+		<restriction base="string">
+			<pattern value="[A-Za-z0-9]{0,27}" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="an-max50">
+		<restriction base="string">
+			<pattern value="[A-Za-z0-9]{0,50}" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="an-max100">
+		<restriction base="string">
+			<pattern value="[A-Za-z0-9]{0,100}" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="an-max255">
+		<restriction base="string">
+			<pattern value="[A-Za-z0-9]{0,255}" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="date8">
+		<restriction base="string">
+			<pattern value="[0-9]{8}" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="date6">
+		<restriction base="string">
+			<pattern value="[0-9]{6}" />
+		</restriction>
+	</simpleType>
+
+</schema>

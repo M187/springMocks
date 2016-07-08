@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.ep.engine.com/hobex-vt/model"
+	elementFormDefault="unqualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.ep.engine.com/hobex-vt/model" xmlns:hobex-types="http://www.ep.engine.com/hobex-vt/hobex-types">
+
+	<import schemaLocation="hobex-types.xsd"
+		namespace="http://www.ep.engine.com/hobex-vt/hobex-types"></import>
+
+	<complexType name="XML">
+		<sequence>
+			<element name="TID" type="hobex-types:tid"></element>
+			<element name="Password" type="hobex-types:an-max20"
+				maxOccurs="1" minOccurs="0">
+			</element>
+			<element name="VU" type="hobex-types:num-max8" maxOccurs="1"
+				minOccurs="0">
+			</element>
+			<element name="ReturnCode" type="hobex-types:num-max3"
+				maxOccurs="1" minOccurs="0">
+			</element>
+            <element name="ReturnText" type="string"></element>
+            <element name="Debit" type="tns:Debit" maxOccurs="1"
+				minOccurs="0">
+			</element>
+			<element name="Commit" type="tns:Commit" maxOccurs="1"
+				minOccurs="0">
+			</element>
+			<element name="ReceiptInfo" type="tns:ReceiptInfo"
+				maxOccurs="1" minOccurs="0">
+			</element>
+		</sequence>
+		<attribute name="version" type="float"></attribute>
+	</complexType>
+
+	<complexType name="Debit">
+		<sequence>
+			<element name="Account" type="hobex-types:iban"/>
+			<element name="Bank" type="hobex-types:bic"/>
+			<element name="CurrencyCode" type="hobex-types:currency" />
+			<element name="CountryCode" type="hobex-types:country" />
+
+			<element name="Amount" type="hobex-types:amount"></element>
+			<element name="Expire" type="hobex-types:string-4" maxOccurs="1" minOccurs="0">
+
+			</element>
+			<element name="ReferenceNumber" type="hobex-types:an-max15">
+			</element>
+			<element name="Reference" type="hobex-types:an-max27" maxOccurs="1" minOccurs="0">
+			</element>
+			<element name="Track2Data" type="hobex-types:an-max50" maxOccurs="1" minOccurs="0">
+			</element>
+			<element name="Track3Data" type="hobex-types:an-max100" maxOccurs="1" minOccurs="0">
+			</element>
+			<element name="MandateID" type="hobex-types:an-max35">
+			</element>
+			<element name="DateOfSignature" type="hobex-types:date8">
+			</element>
+			<element name="DebitorName" type="hobex-types:an-max50">
+			</element>
+			<element name="RecurringPayment" type="hobex-types:recurring-payment">
+			</element>
+		</sequence>
+	</complexType>
+
+	<element name="Hobex" type="tns:Hobex"></element>
+
+	<complexType name="Hobex">
+		<sequence>
+			<element name="XML" type="tns:XML"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="ReceiptInfo">
+		<sequence>
+			<element name="Account" type="hobex-types:iban"></element>
+			<element name="Bank" type="hobex-types:bic"></element>
+			<element name="CountryCode" type="hobex-types:country"></element>
+			<element name="Amount" type="hobex-types:amount"></element>
+			<element name="ReferenceNumber"
+				type="hobex-types:an-max15">
+			</element>
+			<element name="Date" type="hobex-types:date6"></element>
+			<element name="Time" type="hobex-types:date6"></element>
+			<element name="Signature" type="hobex-types:an-max255"></element>
+			<element name="Receipt" type="hobex-types:an-max6"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="Commit">
+		<sequence>
+			<element name="Signature" type="hobex-types:an-max255"></element>
+		</sequence>
+	</complexType>
+</schema>

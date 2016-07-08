@@ -1,0 +1,44 @@
+<Hobex>
+	<XML>
+		<TID>01234569</TID>
+		<Password>Az09</Password>
+		<VU>01238</VU>
+		<ReturnCode>3</ReturnCode>
+		<ReturnText>return text string</ReturnText>
+
+		<Debit>
+			<Account>NL36AEGO6307991285</Account> <!-- iban number -->
+			<!--Bank>Bic here</Bank-->
+			<CurrencyCode>EUR</CurrencyCode>
+			<CountryCode>040</CountryCode>
+			
+			<Amount>01234567890123467</Amount>
+			<Expire>abcd</Expire>
+			
+			<ReferenceNumber>Az15</ReferenceNumber>
+			<Reference>Az27</Reference>
+			<Track2Data>Az50</Track2Data>
+			<Track3Data>Az100</Track3Data>
+			<MandateID>Az35</MandateID>
+			<DateOfSignature>01234567</DateOfSignature>
+			<DebitorName>Az50</DebitorName>
+			<RecurringPayment>0</RecurringPayment>
+		</Debit>
+
+		<Commit>
+			<Signature>Az255</Signature>
+		</Commit>
+		
+		<ReceiptInfo>
+			<Account>NL36AEGO6307991285</Account> <!-- iban number -->
+			<!--Bank>Bic here</Bank-->
+			<CountryCode>040</CountryCode>
+			<Amount>01234567890123467</Amount>
+			<ReferenceNumber>Az15</ReferenceNumber>
+			<Date>012349</Date>
+			<Time>012349</Time>
+			<Signature>Az255</Signature>
+			<Receipt>Az6</Receipt>
+		</ReceiptInfo>
+	</XML>
+</Hobex>
